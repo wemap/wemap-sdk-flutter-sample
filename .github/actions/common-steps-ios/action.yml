@@ -1,0 +1,51 @@
+name: Common steps
+description: "Setups Flutter, SSH, downloads CocoaPods cache, setups environment and bootstraps CocoaPods"
+inputs:
+  working-directory:
+    required: false
+    description: "Provide working-directory here if it's not equal to root"
+    default: './'
+  ssh-private-key:
+    required: false
+    description: "SSH Private key to be provided to 'Setup SSH' step. Pass 'null' (default is also 'null') if you want to skip thi step"
+    default: 'null'
+  project-directory:
+    required: false
+    description: "Set a custom project directory for CocoaPods cache and bootstrap. Default value is set to root - '.'"
+    default: "."
+
+runs:
+  using: "composite"
+  steps:
+    - name: Bootstrap Flutter dependencies
+      shell: zsh -e {0}
+      run: |
+        source ~/.zshrc
+        flutter pub get
+
+#    - name: Setup SSH
+#      uses: webfactory/ssh-agent@v0.8.0
+#      if: ${{ inputs.ssh-private-key != 'null' }}
+#      with:
+#        ssh-private-key: ${{ inputs.ssh-private-key }}
+
+    - name: CocoaPods Cache
+      uses: actions/cache@v4
+      with:
+        path: ${{ inputs.working-directory }}/${{ inputs.project-directory }}/Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: ${{ runner.os }}-pods-
+
+    - name: Setup environment
+      shell: zsh -e {0}
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        source ~/.zshrc
+        ./setup.sh
+
+    - name: Bootstrap CocoaPods
+      shell: zsh -e {0}
+      working-directory: ${{ inputs.working-directory }}
+      run: |
+        source ~/.zshrc
+        bundle exec pod install --repo-update --project-directory=${{ inputs.project-directory }}

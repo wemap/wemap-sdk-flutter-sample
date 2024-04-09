@@ -1,0 +1,45 @@
+buildscript {
+    ext.kotlin_version = '1.9.0'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.20' apply false
+}
+allprojects {
+    apply plugin: 'kotlinx-serialization'
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://dist.nao-cloud.com/android/maven/" }
+        maven {
+            url "s3://mobile-dev.getwemap.com/wemap/sdk/android"
+            credentials(AwsCredentials) {
+                accessKey  String.valueOf(System.getenv("AWS_ACCESS_KEY_ID")) // put your access key here or export it as an env variable
+                secretKey  String.valueOf(System.getenv("AWS_SECRET_ACCESS_KEY")) // put your secret key here or export it as an env variable
+            }
+        }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

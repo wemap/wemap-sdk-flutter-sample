@@ -1,0 +1,83 @@
+PODS:
+  - Alamofire (5.8.1)
+  - Flutter (1.0.0)
+  - MapLibre (5.13.0)
+  - permission_handler_apple (9.1.1):
+    - Flutter
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
+  - Turf (2.8.0)
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+  - wemap_sdk_flutter (0.3.0):
+    - Flutter
+    - WemapMapSDK (~> 0.12.0)
+    - WemapPositioningSDK (~> 0.12.0)
+    - WemapPositioningSDK/VPSARKit (~> 0.12.0)
+  - WemapCoreSDK (0.12.0):
+    - Alamofire (~> 5.8.0)
+    - RxCocoa (~> 6.6.0)
+    - RxSwift (~> 6.6.0)
+    - Turf (~> 2.8.0)
+  - WemapMapSDK (0.12.0):
+    - MapLibre (~> 5.13.0)
+    - WemapCoreSDK (~> 0.12.0)
+  - WemapPositioningSDK (0.12.0):
+    - WemapPositioningSDK/Core (= 0.12.0)
+  - WemapPositioningSDK/Core (0.12.0):
+    - RxSwift (~> 6.6.0)
+    - WemapCoreSDK (~> 0.12.0)
+  - WemapPositioningSDK/VPSARKit (0.12.0):
+    - WemapPositioningSDK/Core
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+  - wemap_sdk_flutter (from `.symlinks/plugins/wemap_sdk_flutter/ios`)
+
+SPEC REPOS:
+  https://github.com/wemap/cocoapods-specs.git:
+    - WemapCoreSDK
+    - WemapMapSDK
+    - WemapPositioningSDK
+  trunk:
+    - Alamofire
+    - MapLibre
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - Turf
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
+  wemap_sdk_flutter:
+    :path: ".symlinks/plugins/wemap_sdk_flutter/ios"
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  MapLibre: 1ed7386635b33f6f3efe33b6ca35281fbe2fb8e0
+  permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
+  webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
+  wemap_sdk_flutter: 6490879acdb847034e6fc6718dc246098dc7cc1f
+  WemapCoreSDK: a17e40138f5051e3bf54db43fdbbc247094df4e8
+  WemapMapSDK: dab33c4ab3454eb77041cfae3b304ee2f00780a9
+  WemapPositioningSDK: f35a4aa28838c535161f1f83a6153d2542cfa2c3
+
+PODFILE CHECKSUM: 6967376b120bfcbce41119b59ab5b7e902c4e8f2
+
+COCOAPODS: 1.15.0
