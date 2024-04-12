@@ -55,7 +55,7 @@ flutter pub get
 * you can run the app on you android device
 
 
-<img src="android.png" alt="Android App" width="200" height="300"/>
+<img src="android.png" alt="Android App" width="200" height="450"/>
 
 
 #### iOS
@@ -75,4 +75,4 @@ flutter pub get
 * you can run the app on you iOS device (RECOMMENDED!!: open and run the iOS side with XCode)
 
 
-<img src="ios.png" alt="iOS App" width="200" height="300"/>
+<img src="ios.png" alt="iOS App" width="200" height="450"/>
