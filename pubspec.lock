@@ -548,10 +548,10 @@ packages:
     dependency: "direct main"
     description:
       name: wemap_sdk_flutter
-      sha256: e90e417a8e433021c015e1190315923bdc65a3cba7f95101fe1965a8a899bebb
+      sha256: "1af2e54061765940d0207e94ce0b258d3e6c247a353564014d9fd69926dc459a"
       url: "https://onepub.dev/api/supddavuhn/"
     source: hosted
-    version: "0.4.0"
+    version: "0.4.1"
   yaml:
     dependency: transitive
     description:
