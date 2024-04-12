@@ -1,16 +1,78 @@
-# wemap_sdk_flutter_sample
 
-A new Flutter project.
+# Wemap SDK Flutter Sample
 
-## Getting Started
+[![Wemap](https://pbs.twimg.com/profile_images/1116734140177616896/Sby-gTyX_400x400.png)](https://pbs.twimg.com/profile_images/1116734140177616896/Sby-gTyX_400x400.png)
 
-This project is a starting point for a Flutter application.
+[![Main](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/main.yml/badge.svg)](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/main.yml)
+[![Pull-Request](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/pull-request.yml/badge.svg)](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/pull-request.yml)
+[![Dispatch](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/dispatch.yml/badge.svg)](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/dispatch.yml)
 
-A few resources to get you started if this is your first Flutter project:
+Wemap SDK Flutter Sample
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Development
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To develop Wemap software in this repository, ensure that you have at least the following software:
+
+- [Flutter](https://docs.flutter.dev/get-started/install)
+
+## Installation
+
+* download repository
+* Before starting running the application sample, you'll need to configure your credentials .
+
+### Configure credentials
+
+Wemap provides WemapSDKs via a private host and you will need to get `secret`, `access` keys and `region` to be able to access it.
+For additional information [contact Wemap team](https://getwemap.com/contact).
+
+Once you get the credentials, specify `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_REGION` in your environment
+
+``` shell
+export AWS_ACCESS_KEY_ID=...
+export AWS_SECRET_ACCESS_KEY=...
+export AWS_REGION=...
+```
+
+then you will send us your flutter team email, so you get permissions to use the SDK
+
+### Add the dependency
+
+firstly login with the same email you have provided us:
+
+``` shell
+dart pub global activate onepub
+onepub login
+```
+
+* And then you can bootstrap dependencies using:
+
+``` shell
+flutter pub get
+```
+
+#### Android
+
+* you can run the app on you android device
+
+
+<img src="android.png" alt="Android App" width="200" height="450"/>
+
+
+#### iOS
+
+* install necessary gems using Bundler and Gemfile or manually
+
+  ``` shell
+  bundle install
+  ```
+
+*  change to ios folder and install the pod
+
+  ``` shell
+  cd ios && pod install --repo-update
+  ```
+
+* you can run the app on you iOS device (RECOMMENDED!!: open and run the iOS side with XCode)
+
+
+<img src="ios.png" alt="iOS App" width="200" height="450"/>

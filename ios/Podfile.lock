@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (5.8.1)
+  - Alamofire (5.9.1)
   - Flutter (1.0.0)
-  - MapLibre (5.13.0)
+  - MapLibre (6.2.0)
   - permission_handler_apple (9.1.1):
     - Flutter
   - RxCocoa (6.6.0):
@@ -13,25 +13,22 @@ PODS:
   - Turf (2.8.0)
   - webview_flutter_wkwebview (0.0.1):
     - Flutter
-  - wemap_sdk_flutter (0.3.0):
+  - wemap_sdk_flutter (0.4.1):
     - Flutter
-    - WemapMapSDK (~> 0.12.0)
-    - WemapPositioningSDK (~> 0.12.0)
-    - WemapPositioningSDK/VPSARKit (~> 0.12.0)
-  - WemapCoreSDK (0.12.0):
-    - Alamofire (~> 5.8.0)
+    - WemapMapSDK (~> 0.14.2)
+    - WemapPositioningSDK/VPSARKit (~> 0.14.2)
+  - WemapCoreSDK (0.14.2):
+    - Alamofire (~> 5.9.0)
     - RxCocoa (~> 6.6.0)
     - RxSwift (~> 6.6.0)
     - Turf (~> 2.8.0)
-  - WemapMapSDK (0.12.0):
-    - MapLibre (~> 5.13.0)
-    - WemapCoreSDK (~> 0.12.0)
-  - WemapPositioningSDK (0.12.0):
-    - WemapPositioningSDK/Core (= 0.12.0)
-  - WemapPositioningSDK/Core (0.12.0):
+  - WemapMapSDK (0.14.2):
+    - MapLibre (~> 6.2.0)
+    - WemapCoreSDK (~> 0.14.2)
+  - WemapPositioningSDK/Core (0.14.2):
     - RxSwift (~> 6.6.0)
-    - WemapCoreSDK (~> 0.12.0)
-  - WemapPositioningSDK/VPSARKit (0.12.0):
+    - WemapCoreSDK (~> 0.14.2)
+  - WemapPositioningSDK/VPSARKit (0.14.2):
     - WemapPositioningSDK/Core
 
 DEPENDENCIES:
@@ -64,20 +61,20 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/wemap_sdk_flutter/ios"
 
 SPEC CHECKSUMS:
-  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  MapLibre: 1ed7386635b33f6f3efe33b6ca35281fbe2fb8e0
+  MapLibre: e596bf944effff789151eb80513d0f321d37dd1f
   permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
   webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
-  wemap_sdk_flutter: 6490879acdb847034e6fc6718dc246098dc7cc1f
-  WemapCoreSDK: a17e40138f5051e3bf54db43fdbbc247094df4e8
-  WemapMapSDK: dab33c4ab3454eb77041cfae3b304ee2f00780a9
-  WemapPositioningSDK: f35a4aa28838c535161f1f83a6153d2542cfa2c3
+  wemap_sdk_flutter: b94f6819590786d8d77619cfc5d3d504d3efea8c
+  WemapCoreSDK: d62792e1fe2c0cabf813147088319e29b7a02cbb
+  WemapMapSDK: 1971d91272bd377f891cb86583e5828ce0451279
+  WemapPositioningSDK: 77e2285c4de01c3fee01803c323426cfed13aac7
 
 PODFILE CHECKSUM: 6967376b120bfcbce41119b59ab5b7e902c4e8f2
 
-COCOAPODS: 1.15.0
+COCOAPODS: 1.15.2

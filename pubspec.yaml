@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   wemap_sdk_flutter:
     hosted: https://onepub.dev/api/supddavuhn/
-    version: ^0.4.0
+    version: 0.4.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
