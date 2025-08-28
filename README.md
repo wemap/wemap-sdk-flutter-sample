@@ -3,9 +3,7 @@
 
 [![Wemap](https://pbs.twimg.com/profile_images/1116734140177616896/Sby-gTyX_400x400.png)](https://pbs.twimg.com/profile_images/1116734140177616896/Sby-gTyX_400x400.png)
 
-[![Main](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/main.yml/badge.svg)](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/main.yml)
-[![Pull-Request](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/pull-request.yml/badge.svg)](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/pull-request.yml)
-[![Dispatch](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/dispatch.yml/badge.svg)](https://github.com/wemap/wemap-sdk-flutter/actions/workflows/dispatch.yml)
+
 
 Wemap SDK Flutter Sample
 
@@ -45,6 +43,7 @@ onepub login
 ```
 
 * And then you can bootstrap dependencies using:
+* `FVM` is provided if you want use same flutter version.
 
 ``` shell
 flutter pub get
@@ -54,8 +53,10 @@ flutter pub get
 
 * you can run the app on you android device
 
-
-<img src="android.png" alt="Android App" width="200" height="450"/>
+<p align="center">
+<img src="images/android/android-map.png" alt="Android Map App" width="200" height="450"/>
+<img src="images/android/android.png" alt="Android  App" width="200" height="450"/>
+</p>
 
 
 #### iOS
@@ -72,7 +73,10 @@ flutter pub get
   cd ios && pod install --repo-update
   ```
 
-* you can run the app on you iOS device (RECOMMENDED!!: open and run the iOS side with XCode)
+* you can run the app on you iOS device
 
 
-<img src="ios.png" alt="iOS App" width="200" height="450"/>
+<p align="center">
+<img src="images/ios/iOS-map.PNG" alt="iOS Map App" width="200" height="450"/>
+<img src="images/ios/iOS.jpeg" alt="iOS  App" width="200" height="450"/>
+</p>

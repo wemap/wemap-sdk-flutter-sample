@@ -1,5 +1,5 @@
 name: wemap_sdk_flutter_sample
-description: "A new Flutter project."
+description: "A Flutter example illustration using wemap-sdk-flutter dependency."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -37,7 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   wemap_sdk_flutter:
     hosted: https://onepub.dev/api/supddavuhn/
-    version: 0.4.1
+    version: ^0.23.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

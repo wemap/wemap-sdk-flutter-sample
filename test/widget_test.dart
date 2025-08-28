@@ -13,7 +13,7 @@ import 'package:wemap_sdk_flutter_sample/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyHomePage(title: 'test'));
+    await tester.pumpWidget(const MapContainer(title: 'test'));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

@@ -2,17 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:wemap_sdk_flutter/wemap_sdk_flutter.dart';
 
 void main() {
-  runApp(const MyHomePage(
-    title: 'wemap sample',
-  ));
+  runApp(const MaterialApp(home: HomePage()));
 }
 
-class MyHomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Colors.greenAccent,
+        child: Center(
+            child: ElevatedButton(onPressed: () {
+    Navigator.push(context, MaterialPageRoute(builder: (_)=> const MapContainer(title: "Wemap Sample")));
+    }, child: const Text("Go Map")),)
+    ,
+    );
+  }
+}
+
+class MapContainer extends StatelessWidget {
   final String title;
 
-  const MyHomePage({super.key, required this.title});
+  const MapContainer({super.key, required this.title});
 
-  void _onMapReady(MapData mapData, MapManager livemapManager) {
+  void _onMapReady(MapData mapData, MapManager mapManager) {
     // what ever to do, the map is ready
   }
 
@@ -26,17 +40,29 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(title: Text(title)),
-            body: Container(
-                constraints: const BoxConstraints.expand(),
-                child: WemapMap(
-                  options: MapOptions(
-                      mapID: 25669, token: "", environment: Environment.PROD),
-                  onMapReady: _onMapReady,
-                  onActiveLevelChanged: _onActiveLevelChanged,
-                  onBuildingFocusChanged: _onBuildingFocusChanged,
-                ))));
+    return Scaffold(
+        appBar: AppBar(title: Center(child: Text(title))),
+        body: Container(
+            constraints: const BoxConstraints.expand(),
+            child: WemapMap(
+              options: MapOptions(
+                  mapID: 30265,
+                  token: "",
+                  environment: Environment.PROD,
+                  locationSource: LocationSource.VPS),
+              onMapReady: _onMapReady,
+              onActiveLevelChanged: _onActiveLevelChanged,
+              onBuildingFocusChanged: _onBuildingFocusChanged,
+              searchBarEnabled: true,
+              userLocationButtonEnabled: true,
+              levelsTabEnabled: true,
+              filtersTabEnabled: true,
+              detailedViewEnabled: true,
+              poisListSheetEnabled: true,
+              augmentedRealityButtonEnabled: true,
+              vpsInProcessScreen: true,
+              itineraryWidgetEnabled: true,
+              navigationWidgetEnabled: true,
+            )));
   }
 }
